@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Phishing URL Detector</title>
+    <style>
+        body { font-family: Arial; background: #f9f9f9; padding: 50px; text-align: center; }
+        input[type="text"] { width: 60%; padding: 10px; font-size: 16px; }
+        input[type="submit"] { padding: 10px 20px; font-size: 16px; }
+        .result { margin-top: 20px; font-size: 20px; }
+    </style>
+</head>
+<body>
+    <h1>🔍 Phishing URL Detector</h1>
+    <form method="POST">
+        <input type="text" name="url" placeholder="Enter URL here..." required value="{{ url }}">
+        <br><br>
+        <input type="submit" value="Check URL">
+    </form>
+    {% if result %}
+        <div class="result">{{ result }}</div>
+    {% endif %}
+</body>
+</html>
